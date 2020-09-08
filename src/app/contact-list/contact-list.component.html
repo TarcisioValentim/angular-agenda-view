@@ -5,29 +5,31 @@
           <th>#</th>
           <th>Nome</th>
           <th>Email</th>
-          <th>Ações</th>
+          <th>Descricoes</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let contact of contacts">
   
-          <td>{{ contact.id }}</td>
-          <td> {{ contact.name }}</td>
-          <td> {{ contact.email }}</td>
-          <td>
-            <button class="btn btn-primary" (click)="selectContact(contact)"> Mostrar detalhes</button>
-          </td>
+          <td>{{ c.id }}</td>
+          <td> {{ c.name }}</td>
+          <td> {{ c.email }}</td>
+          <td> {{ c.description }}</td>
+          <td><button class="btn btn-primary" (click)="selectContact(c)"> Mostrar detalhes</button></td>
+          <td><button class="btn btn-danger" (click)="excluir(contact.id)"> Excluir</button></td>
         </tr>
       </tbody>
     </table>
-    <div class="card text-center" *ngIf="selectedContact">
+
+    <div class="card text-center" *ngIf="contactSelecionado">
         <div class="card-header">
-          # {{selectedContact.id}}
+          # {{contactSelecionado.id}}
         </div>
         <div class="card-block">
-          <h4 class="card-title">{{selectedContact.name}}</h4>
+          <h4 class="card-title">{{contactSelecionado.name}}</h4>
+          <h4 class="card-title">{{contactSelecionado.email}}</h4>
           <p class="card-text">
-            {{selectedContact.description}}
+            {{contactSelecionado.description}}
           </p>    
         </div>
   

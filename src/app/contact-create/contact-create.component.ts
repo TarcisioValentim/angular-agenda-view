@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ContactServiceService } from '../contact-service.service';
+
 
 @Component({
   selector: 'app-contact-create',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactCreateComponent implements OnInit {
 
-  constructor() { }
+  public contact = {name: "", email: "", description: ""};
 
-  ngOnInit(): void {
+  constructor(private contactService: ContactServiceService) { }
+
+  ngOnInit() {
   }
+
+  salvar(){
+    this.contactService.post(this.contact).subscribe(r => (this.contact = {name: "", email: "", description: ""}));
+  
+  }  
 
 }
