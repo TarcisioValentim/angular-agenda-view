@@ -9,14 +9,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let contact of contacts">
+        <tr *ngFor="let c of contacts">
   
           <td>{{ c.id }}</td>
           <td> {{ c.name }}</td>
           <td> {{ c.email }}</td>
           <td> {{ c.description }}</td>
           <td><button class="btn btn-primary" (click)="selectContact(c)"> Mostrar detalhes</button></td>
-          <td><button class="btn btn-danger" (click)="excluir(contact.id)"> Excluir</button></td>
+          <td><button class="btn btn-danger" (click)="excluir(c.id)"> Excluir</button></td>
         </tr>
       </tbody>
     </table>
