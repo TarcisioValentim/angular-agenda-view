@@ -1,4 +1,30 @@
-# AgendaView
+# crud-agenda-view
+Projetos with as stacks:
+    { Java.
+        -eclipse
+        -maven
+        -Spring-boot
+        -Spring-web
+        -spring-postgres
+    Angular.
+        -vscode
+        -primeng
+        -bootstrap
+    }   
+
+Endpoints with insomnia:
+
+<p><img src="src/assets/insomnia.jpg"  width="200" height="200"></p>
+
+Action  | Url
+------------- | -------------
+ (GET)  | http://localhost:8080/contact
+ (POST) | http://localhost:8080/contact/
+ (DELETE) |http://localhost:8080/contact/{id}
+
+
+
+## 🚀 Steps
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
@@ -25,3 +51,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+------------------------------------------------------------------------
+powered by
+<img src="src/assets/logo1.png">
